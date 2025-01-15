@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIF VERSION="0.3"  xmlns="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3 http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3/XMLBIFv0_3.xsd">
+<NETWORK>
+<NAME>Untitled</NAME>
+<PROPERTY>detailed = </PROPERTY>
+<PROPERTY>short = </PROPERTY>
+
+<VARIABLE TYPE="nature">
+	<NAME>Ploaie</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7166.0, 5110.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Cald</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7304.0, 5204.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Vant</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7412.0, 5100.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Pescuit</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7193.0, 5310.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Stat acasa</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7333.0, 5307.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Ceata</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7294.0, 5089.0)</PROPERTY>
+</VARIABLE>
+
+<DEFINITION>
+	<FOR>Ploaie</FOR>
+	<TABLE>0.1 0.9</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Cald</FOR>
+	<GIVEN>Ploaie</GIVEN>
+	<GIVEN>Vant</GIVEN>
+	<GIVEN>Ceata</GIVEN>
+	<TABLE>0.05 0.95 0.1 0.9 0.15 0.85 0.2 0.8 0.1 0.9 0.3 0.7 0.7 0.3 0.8 0.2</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Vant</FOR>
+	<TABLE>0.3 0.7</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Pescuit</FOR>
+	<GIVEN>Cald</GIVEN>
+	<TABLE>0.9 0.1 0.1 0.9</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Stat acasa</FOR>
+	<GIVEN>Cald</GIVEN>
+	<TABLE>0.4 0.6 0.8 0.2</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Ceata</FOR>
+	<TABLE>0.2 0.8</TABLE>
+</DEFINITION>
+</NETWORK>
+</BIF>
