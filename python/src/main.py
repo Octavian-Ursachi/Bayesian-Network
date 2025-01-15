@@ -384,7 +384,24 @@ class SimpleGraphApp:
 
     def open_query_popup(self, node):
         prob = self.compute_node_probability(node)
-        print(prob)
+
+        # Create a new popup window
+        popup = tk.Toplevel(self.root)
+        popup.title(f"Probabilities for {node.name}")
+
+        # Display probabilities in the popup
+        frame = tk.Frame(popup)
+        frame.pack(padx=10, pady=10)
+
+        tk.Label(frame, text=f"Probability of {node.name} = True:").grid(row=0, column=0, sticky="w")
+        tk.Label(frame, text=f"{prob[True]:.4f}").grid(row=0, column=1, sticky="e")
+
+        tk.Label(frame, text=f"Probability of {node.name} = False:").grid(row=1, column=0, sticky="w")
+        tk.Label(frame, text=f"{prob[False]:.4f}").grid(row=1, column=1, sticky="e")
+
+        # Add a close button
+        close_button = tk.Button(frame, text="Close", command=popup.destroy)
+        close_button.grid(row=2, column=0, columnspan=2, pady=10)
 
     def open_observation_window(self, node):
         new_window = tk.Toplevel(self.root)
